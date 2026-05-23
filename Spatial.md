@@ -411,7 +411,7 @@ Handling spatial data
     and raster data.
 -   `r pkg("tidyterra")` implements several `tidyverse` methods (from `dplyr` and
     `tidyr` packages) for `SpatRaster` and `SpatVector` objects from the `r pkg("terra")`.
-    Similar to the native support found in the `r pkg("sf")` and `r pkg("stars")`
+    Similar to the native support in the `r pkg("sf")` and `r pkg("stars")`
     packages, this enables familiar tidyverse-style processing of spatial data while
     preserving the original spatial class and structure.
 -   The `r github("cran/gdalUtils")` (see
@@ -444,8 +444,8 @@ Handling spatial data
     and methods (conversions, basic calculations and basic data manipulation).
 -   The `r pkg("trip")` package extends spatial classes to permit the
     accessing and manipulating of spatial data for animal tracking.
--   `r pkg("sfnetworks")` connects the `r pkg("sf")` package and the `r pkg("tidygraph")`
-    package for geospatial network analysis. It introduces an `sfnetwork` class
+-   `r pkg("sfnetworks")` connects the `r pkg("sf")` and the `r pkg("tidygraph")`
+    packages for geospatial network analysis. It introduces an `sfnetwork` class
     that stores both nodes and edges as spatial simple features, allowing for
     the manipulation, analysis, and visualization of networks such as road or
     river networks. `r pkg("sfnetworks")` supports tasks such as shortest path
@@ -464,7 +464,7 @@ Handling spatial data
 -   The `r pkg("exactextractr")` for fast and accurate summary of raster values
     on polygonal areas (known as zonal statistics).
 -   The `r pkg("geodist")` is a fast and lightweight package for computing
-    geographic distances between sets of coordinates (latitude and longitude).
+    geographic distances between sets of coordinates (longitude and latitude).
     It supports Haversine, Vincenty, and geodesic distance metrics, and is
     optimized for high-performance computing on large spatial datasets.
 
@@ -656,7 +656,7 @@ study area.
 -   `r pkg("ecespa")` provides wrappers, functions and data for
     spatial point pattern analysis, used in the book on Spatial Ecology of
     the ECESPA/AEET. The functions for binning points on grids in `r pkg("ads")`
-    may also be of interest. The `r pkg("ads")` package prforms first- and second-order
+    may also be of interest. The `r pkg("ads")` package performs first- and second-order
     multi-scale analyses derived from Ripley's K-function. 
 -   The `r pkg("dbmss")` package allows
     simple computation of a full set of spatial statistic functions of

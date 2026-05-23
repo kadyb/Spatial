@@ -236,7 +236,9 @@ dealing with open standard formats or proprietary formats.
     describes a GeoJSON-centred approach to reading GeoJSON and WKT data.
     The entry lists `r pkg("geojson")`, and `r pkg("geojsonio")`, among others.
     The GeoJSON format can also be read and written with `r pkg("gdalraster")`,
-    `r pkg("sf")`, `r pkg("terra")`, and `r pkg("vapour")`. 
+    `r pkg("sf")`, `r pkg("terra")`, and `r pkg("vapour")`. `r pkg("yyjsonr")`
+    provides extremely fast GeoJSON parsing and serialization compared to
+    aforementioned packages.
 -   *Geographic Markup Language (GML):* GML format can be read and written
     with `r pkg("sf")`. Additional GML native reader and writer is provided
     by `r pkg("geometa")` model with bindings to the `r pkg("sf")` classes, 
@@ -247,7 +249,7 @@ dealing with open standard formats or proprietary formats.
     `r pkg("ncdf4")` or `r pkg("RNetCDF")`. Additionally, both `r pkg("terra")`
     and `r pkg("stars")` have capabilities for reading and writing NetCDF files.
 -   *LAS / LAZ:* These file formats are designed to work with lidar point
-    cloud data and can be read and written with `r pkg("lidR")`.
+    cloud data and can be read/written with `r pkg("lidR")`.
 
 *Proprietary Data Formats*
 
@@ -407,6 +409,11 @@ Handling spatial data
     data cubes.
 -   `r pkg("terra")` package introduces many GIS methods for spatial vector
     and raster data.
+-   `r pkg("tidyterra")` implements several `tidyverse` methods (from `dplyr` and
+    `tidyr` packages) for `SpatRaster` and `SpatVector` objects from the `r pkg("terra")`.
+    Similar to the native support found in the `r pkg("sf")` and `r pkg("stars")`
+    packages, this enables familiar tidyverse-style processing of spatial data while
+    preserving the original spatial class and structure.
 -   The `r github("cran/gdalUtils")` (see
     <https://stat.ethz.ch/pipermail/r-sig-geo/2022-April/028953.html>)
     and `r pkg("gdalUtilities")` packages provide
@@ -437,6 +444,12 @@ Handling spatial data
     and methods (conversions, basic calculations and basic data manipulation).
 -   The `r pkg("trip")` package extends spatial classes to permit the
     accessing and manipulating of spatial data for animal tracking.
+-   `r pkg("sfnetworks")` connects the `r pkg("sf")` package and the `r pkg("tidygraph")`
+    package for geospatial network analysis. It introduces an `sfnetwork` class
+    that stores both nodes and edges as spatial simple features, allowing for
+    the manipulation, analysis, and visualization of networks such as road or
+    river networks. `r pkg("sfnetworks")` supports tasks such as shortest path
+    calculation, routing or spatial joins.
 <!-- Roger, should we link here to papers such as https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2656.13116, https://link.springer.com/article/10.1007%2Fs40823-021-00067-y, https://link.springer.com/article/10.1007/s10109-020-00342-2, etc?-->
 
 ### Data processing - specific
@@ -450,6 +463,10 @@ Handling spatial data
 -   The `r pkg("qualmap")` package can be used to digitize qualitative GIS data.
 -   The `r pkg("exactextractr")` for fast and accurate summary of raster values
     on polygonal areas (known as zonal statistics).
+-   The `r pkg("geodist")` is a fast and lightweight package for computing
+    geographic distances between sets of coordinates (latitude and longitude).
+    It supports Haversine, Vincenty, and geodesic distance metrics, and is
+    optimized for high-performance computing on large spatial datasets.
 
 ### Remote sensing
 
@@ -552,6 +569,13 @@ Visualizing spatial data
     modelling support. In addition, `r pkg("GEOmap")` provides mapping
     facilities directed to meet the needs of geologists and uses 
     the `r pkg("geomapdata")` package.
+-   `r pkg("rayshader")` for creating 2D and 3D visualizations of elevation
+    data and maps. It uses ray tracing, hillshading, and ambient occlusion
+    techniques to produce highly detailed representations of terrain.
+-   `r pkg("tidyterra")` extends `r pkg("ggplot2")` to work natively with
+    `r pkg("terra")` objects (rasters and vectors), providing dedicated
+    `geom_spatraster()` and `geom_spatvector()` functions. This allows for
+    the production of thematic maps directly within the `ggplot2` framework.
 
 ### Packages based on web-mapping frameworks
 
@@ -567,6 +591,10 @@ Visualizing spatial data
     and OpenStreetMap.
 -   `r pkg("mapedit")` provides an R shiny widget based on `r pkg("leaflet")`
     for editing or creating sf geometries.
+-   `r pkg("mapgl")` provides an R interface to [Mapbox GL JS](https://www.mapbox.com/mapbox-gljs)
+    and [MapLibre GL JS](https://maplibre.org/projects/gl-js/), enabling interactive,
+    high-performance web maps rendered via WebGL. It allows users to build
+    customizable web maps and it integrates well with Shiny applications.
 
 ### Building cartograms
 

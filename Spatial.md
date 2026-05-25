@@ -445,9 +445,8 @@ Handling spatial data
 -   The `r pkg("trip")` package extends spatial classes to permit the
     accessing and manipulating of spatial data for animal tracking.
 -   `r pkg("sfnetworks")` connects the `r pkg("sf")` and the `r pkg("tidygraph")`
-    packages for geospatial network analysis,
-    supporting tasks such as shortest path
-    calculation, routing or spatial joins.
+    packages for geospatial network analysis, supporting tasks such as shortest
+    path calculation, routing or spatial joins.
 <!-- Roger, should we link here to papers such as https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2656.13116, https://link.springer.com/article/10.1007%2Fs40823-021-00067-y, https://link.springer.com/article/10.1007/s10109-020-00342-2, etc?-->
 
 ### Data processing - specific
